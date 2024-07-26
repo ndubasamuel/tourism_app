@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment2">
+    <fragment
+        android:id="@+id/landingFragment2"
+        android:name="example.application.view.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment2_to_accommodationFragment"
+            app:destination="@id/accommodationFragment" />
+        <action
+            android:id="@+id/action_landingFragment2_to_safarisFragment"
+            app:destination="@id/safarisFragment" />
+        <action
+            android:id="@+id/action_landingFragment2_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_landingFragment2_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accommodationFragment"
+        android:name="example.application.view.AccommodationFragment"
+        android:label="fragment_accommodation"
+        tools:layout="@layout/fragment_accommodation" >
+        <action
+            android:id="@+id/action_accommodationFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+        <action
+            android:id="@+id/action_accommodationFragment_to_safarisFragment"
+            app:destination="@id/safarisFragment" />
+        <action
+            android:id="@+id/action_accommodationFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_accommodationFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/safarisFragment"
+        android:name="example.application.view.SafarisFragment"
+        android:label="fragment_safaris"
+        tools:layout="@layout/fragment_safaris" >
+        <action
+            android:id="@+id/action_safarisFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+        <action
+            android:id="@+id/action_safarisFragment_to_accommodationFragment"
+            app:destination="@id/accommodationFragment" />
+        <action
+            android:id="@+id/action_safarisFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_safarisFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currencyFragment"
+        android:name="example.application.view.CurrencyFragment"
+        android:label="fragment_currency"
+        tools:layout="@layout/fragment_currency" >
+        <action
+            android:id="@+id/action_currencyFragment_to_accommodationFragment"
+            app:destination="@id/accommodationFragment" />
+        <action
+            android:id="@+id/action_currencyFragment_to_safarisFragment"
+            app:destination="@id/safarisFragment" />
+        <action
+            android:id="@+id/action_currencyFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+        <action
+            android:id="@+id/action_currencyFragment_to_landingFragment22"
+            app:destination="@id/landingFragment2" />
+        <action
+            android:id="@+id/action_currencyFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flightsFragment"
+        android:name="example.application.view.FlightsFragment"
+        android:label="fragment_flights"
+        tools:layout="@layout/fragment_flights" >
+        <action
+            android:id="@+id/action_flightsFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_flightsFragment_to_safarisFragment"
+            app:destination="@id/safarisFragment" />
+        <action
+            android:id="@+id/action_flightsFragment_to_accommodationFragment"
+            app:destination="@id/accommodationFragment" />
+        <action
+            android:id="@+id/action_flightsFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="example.application.view.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" >
+        <action
+            android:id="@+id/action_serviceFragment_to_accommodationFragment"
+            app:destination="@id/accommodationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="example.application.view.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="example.application.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="example.application.view.ProfileSettingsFragment"
+        android:label="fragment_profile_settings"
+        tools:layout="@layout/fragment_profile_settings" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="example.application.view.registration.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="example.application.view.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2" />
+    </fragment>
+</navigation>

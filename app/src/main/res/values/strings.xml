@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string-array name="adults_array">
+        <item>1 Adult</item>
+        <item>2 Adults</item>
+        <item>3 Adults</item>
+        <item>4 Adults</item>
+    </string-array>
+    <string-array name="children_array">
+        <item>0 Children</item>
+        <item>1 Child</item>
+        <item>2 Children</item>
+        <item>3 Children</item>
+        <item>4 Children</item>
+    </string-array>
+
+</resources>

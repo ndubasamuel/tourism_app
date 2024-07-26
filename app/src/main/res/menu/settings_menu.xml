@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:icon="@drawable/icons8_booking_16"
+            android:title="Home" />
+        <item android:id="@+id/contact"
+            android:icon="@drawable/icons8_contact_50"
+            android:title="Contact" />
+        <item android:id="@+id/profile"
+            android:icon="@drawable/icons8_admin_settings_male_24"
+            android:title="Profile" />
+        <item android:id="@+id/gallery"
+            android:icon="@drawable/icons8_gallery_32"
+            android:title="Gallery" />
+
+    </group>
+    <item android:title="profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/about"
+                    android:title="About"
+                    android:icon="@drawable/icons8_about_24"/>
+                <item
+                    android:id="@+id/login"
+                    android:icon="@drawable/icons8_gallery_32"
+                    android:title="Login"/>
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Communication">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/share"
+                    android:title="Share"
+                    android:icon="@drawable/icons8_share_24"/>
+                <item
+                    android:id="@+id/rate_us"
+                    android:icon="@drawable/icons8_rate_50"
+                    android:title="Rate Us"/>
+            </group>
+
+        </menu>
+    </item>
+
+</menu>
