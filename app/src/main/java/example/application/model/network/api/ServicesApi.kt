@@ -1,11 +1,14 @@
 package example.application.model.network.api
 
 import example.application.model.network.response.authResponse.AuthResponse
+import example.application.model.network.response.guides.GuidesResponse
+import example.application.model.network.response.pay.PayResponse
 import example.application.model.network.response.services.ServicesResponse
 import example.application.utils.Resource
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface ServicesApi {
@@ -36,4 +39,10 @@ interface ServicesApi {
         @Field("password") password: String
 
     ): AuthResponse
+
+    @GET("show/guides")
+    suspend fun getGuides(@Header("Authorization") authToken: String): GuidesResponse
+
+    @GET("payment/makepayment")
+    suspend fun makePayments(@Header("Authorization") authToken: String): PayResponse
 }

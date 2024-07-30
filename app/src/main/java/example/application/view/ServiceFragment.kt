@@ -4,25 +4,33 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ListView
 
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
+import example.application.R
 import example.application.databinding.FragmentServiceBinding
 import example.application.model.network.api.RetrofitInstance
 import example.application.model.network.response.services.Service
 import example.application.model.repository.Repository
 import example.application.utils.Resource
+import example.application.view.adapters.TopScrollAdapter
+import example.application.view.booking.BookingBottomSheetFragment
 import example.application.viewModel.ViewModelClass
 import example.application.viewModel.ViewModelFactory
 import example.eclestay.view.adapters.ServiceAdapter
 
-class ServiceFragment : Fragment() {
+class ServiceFragment : Fragment(), ServiceAdapter.OnItemClickListener {
 
     private val repository: Repository by lazy {
         Repository.getInstance(RetrofitInstance.api)
@@ -35,9 +43,11 @@ class ServiceFragment : Fragment() {
 
     private lateinit var mSearchView : SearchView
     private lateinit var mToolbar: AppBarLayout
+    private lateinit var bookingButton: Button
 
     private lateinit var serviceAdapter: ServiceAdapter
     private lateinit var allServices: List<Service>
+//    private lateinit var listView: ListView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         serviceBinding = FragmentServiceBinding.inflate(inflater, container, false)
@@ -52,7 +62,7 @@ class ServiceFragment : Fragment() {
                 is Resource.Success -> {
                     hideProgressBar()
                     if (response.value.status == 200) {
-                        serviceAdapter.submitList(response.value.data.Services)
+                        serviceAdapter.differ.submitList(response.value.data.Services)
                     }
                     Toast.makeText(requireContext(), response.value.message, Toast.LENGTH_SHORT).show()
                 }
@@ -66,6 +76,7 @@ class ServiceFragment : Fragment() {
             }
         })
 
+
         mToolbar = serviceBinding.toolBar
         setHasOptionsMenu(true)
 
@@ -75,8 +86,9 @@ class ServiceFragment : Fragment() {
         viewModel.getServices()
     }
 
+
     private fun setUpRecyclerView() {
-        serviceAdapter = ServiceAdapter()
+        serviceAdapter = ServiceAdapter(this)
         serviceBinding.serviceRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             adapter = serviceAdapter
@@ -100,10 +112,11 @@ class ServiceFragment : Fragment() {
     }
 
     private fun filterServices(query: String?) {
+        allServices = this.serviceAdapter.differ.currentList
         val filteredList = allServices.filter { service ->
             service.service_name.contains(query ?: "", ignoreCase = true)
         }
-        serviceAdapter.submitList(filteredList)
+        serviceAdapter.differ.submitList(filteredList)
 
     }
 
@@ -119,5 +132,11 @@ class ServiceFragment : Fragment() {
 
     private fun hideProgressBar() {
         serviceBinding.progressBar.visibility = View.INVISIBLE
+    }
+
+    override fun onBookNowClick(service: Service) {
+
+        val bottomSheet= BookingBottomSheetFragment()
+        bottomSheet.show(parentFragmentManager, bottomSheet.tag)
     }
 }

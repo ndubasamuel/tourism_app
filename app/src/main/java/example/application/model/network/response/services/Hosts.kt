@@ -8,7 +8,7 @@ data class Hosts(
     val email: String,
     val number: Long,
     val picture: String,
-    val county_id: Int,
+    val county_id: String,
     val approved: Boolean,
     val business_doc: String,
     val business_name: String,

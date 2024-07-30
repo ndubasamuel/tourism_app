@@ -7,7 +7,7 @@ data class Service(
     val images: List<Image>,
     val pricing_criteria: String,
     val type_id: Int,
-    val county_id: Int,
+    val county_id: String,
     val description: String,
     val start_date: String,
     val end_date: String,

@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.viewModelFactory
 import example.application.model.network.response.authResponse.AuthResponse
+import example.application.model.network.response.guides.GuidesResponse
+import example.application.model.network.response.pay.PayResponse
 import example.application.model.network.response.services.ServicesResponse
 import example.application.model.repository.Repository
 import example.application.utils.Resource
@@ -30,6 +32,16 @@ class ViewModelClass(private val repository: Repository): ViewModel() {
     val registerData: LiveData<Resource<AuthResponse>>
         get() = _registerData
 
+
+    private val _makePayments: MutableLiveData<Resource<PayResponse>> = MutableLiveData()
+    val makePayments: LiveData<Resource<PayResponse>>
+        get() = _makePayments
+
+
+    private val _tourGuides: MutableLiveData<Resource<GuidesResponse>> = MutableLiveData()
+    val tourGuides: LiveData<Resource<GuidesResponse>>
+        get() = _tourGuides
+
     fun getServices() {
         viewModelScope.launch {
                 withContext(Dispatchers.Main) {
@@ -47,7 +59,6 @@ class ViewModelClass(private val repository: Repository): ViewModel() {
             Log.e("ViewModel", "Repo Data ${email}, $password")
             _loginData.value = repository.login(email, password)
         }
-        throw Exception("Login Failed")
 
     }
 
@@ -59,6 +70,18 @@ class ViewModelClass(private val repository: Repository): ViewModel() {
             _registerData.value =
                 repository.registerUser(firstName, secondName, email, phone, password)
 
+        }
+    }
+
+    fun makePayments() {
+        viewModelScope.launch {
+            _makePayments.value = repository.makePayments()
+        }
+    }
+
+    fun getTourGuides() {
+        viewModelScope.launch {
+            _tourGuides.value = repository.getTourGuides()
         }
     }
 

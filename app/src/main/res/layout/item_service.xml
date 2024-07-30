@@ -23,7 +23,7 @@
     <ImageView
         android:id="@+id/picImage"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,34 +35,48 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/picImage">
 
         <ImageView
-            android:id="@+id/image1"
+            android:id="@+id/imageView1"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/kisumu"/>
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/kisumu"
+
+
+            />
         <ImageView
-            android:id="@+id/image2"
+            android:id="@+id/imageView2"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/kisumu"/>
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/kisumu"
+
+
+            />
         <ImageView
-            android:id="@+id/image3"
+            android:id="@+id/imageView3"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/kisumu"/>
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/kisumu"
+
+
+            />
         <ImageView
-            android:id="@+id/image4"
+            android:id="@+id/imageView4"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/kisumu"/>
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/kisumu"
+
+            />
+
     </LinearLayout>
 
     <TextView
@@ -70,9 +84,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Service Name"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#DD4343"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#73443F"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -81,16 +98,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/white"
         android:background="@drawable/landing_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"
-        app:cardElevation="20dp">
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/landing_background"
             android:orientation="horizontal">
 
             <ImageView
@@ -105,8 +123,9 @@
                 android:id="@+id/county"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nyali"
+                android:text="Kisumu"
                 android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp" />
@@ -125,6 +144,7 @@
                 android:layout_height="30dp"
                 android:text="4.0"
                 android:textSize="12sp"
+                android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp" />
@@ -142,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginStart="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/drawable_background"
                 android:layout_weight="0.333">
 
@@ -151,7 +171,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/bed"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/numberOfBeds"
@@ -160,6 +181,7 @@
                     android:text="2 bed"
                     android:textColor="@color/black"
                     android:textSize="12sp"
+                    android:fontFamily="@font/roboto_medium"
                     android:layout_marginEnd="1dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp" />
@@ -171,20 +193,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_weight="0.333"
-                android:layout_marginStart="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/drawable_background">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/guide" />
+                    android:src="@drawable/guide"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/hostName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="host"
+                    android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:layout_marginTop="10dp"
@@ -196,7 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginStart="10dp"
+                android:layout_margin="5dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/drawable_background"
                 android:layout_weight="0.333">
@@ -207,24 +231,66 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/wifi" />
+                    android:src="@drawable/shower_24px"
+                    app:tint="@color/black" />
 
                 <TextView
+                    android:id="@+id/bath"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="wifi"
+                    android:text="bath"
                     android:textColor="@color/black"
                     android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/roboto_medium"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="20dp" />
+                     />
             </LinearLayout>
         </LinearLayout>
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Availability:"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#983A3A"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/roboto_medium"
+
+            />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16dp"
+            android:layout_marginTop="120dp"
+            android:textColor="#983A3A"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            />
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ksh:"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16dp"
+            android:layout_marginTop="120dp"
+            android:textColor="#983A3A"
+            android:layout_gravity="end"
+            android:layout_marginEnd="70dp"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="150dp"
             android:orientation="horizontal">
 
             <TextView
@@ -234,10 +300,10 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
                 android:fontFamily="@font/roboto_medium" />
 
-            <TextView
+            <EditText
                 android:id="@+id/startDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -245,13 +311,16 @@
                 android:textSize="12sp"
                 android:layout_marginStart="100dp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/roboto_medium" />
+                android:fontFamily="@font/roboto_medium"
+                android:hint="Start_Date"
+                android:textColorHint="@color/black"
+                />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="190dp"
             android:orientation="horizontal">
 
             <TextView
@@ -261,10 +330,10 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
                 android:fontFamily="@font/roboto_medium" />
 
-            <TextView
+            <EditText
                 android:id="@+id/endDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -272,8 +341,55 @@
                 android:textSize="12sp"
                 android:layout_marginStart="110dp"
                 android:textColor="@color/black"
+                android:hint="End_Date"
+                android:textColorHint="@color/black"
                 android:fontFamily="@font/roboto_medium" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="20dp"
+            >
+           <TextView
+               android:id="@+id/availabilityCheck"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Availability:"
+               android:layout_marginStart="40dp"
+               android:fontFamily="@font/roboto_medium"
+               android:textSize="16dp"
+               android:textColor="@color/black"
+               />
+
+            <TextView
+                android:id="@+id/availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Availability"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                />
+            <Button
+                android:id="@+id/book_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOOK NOW"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/buttons"
+                />
+
+
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <TextView

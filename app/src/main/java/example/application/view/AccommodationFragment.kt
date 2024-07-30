@@ -68,8 +68,6 @@ class AccommodationFragment : Fragment(), TopScrollAdapter.OnItemClickListener, 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val factory = ViewModelFactory(repository)
-//        viewModel = ViewModelProvider(this, )[ViewModelClass::class.java]
         viewModel.services.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is Resource.Success -> {

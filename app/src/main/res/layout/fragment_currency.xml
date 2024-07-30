@@ -4,70 +4,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D969C"
+    android:background="@drawable/landing_background"
     tools:context=".view.CurrencyFragment">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#164C5C"
+        android:background="#DFD0D0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="#164C5C"
             >
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="70dp"
-                android:src="@drawable/icons8_wave_25"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="70dp"
-                app:tint="#44FAFA" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="25dp"
                 android:text="EclecStay"
                 android:textStyle="bold"
                 android:textSize="38sp"
-                android:textColor="#2AF6F6" />
+                android:textColor="#2A86F6" />
 
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="25dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
+                android:background="#DFD0D0"
                 android:foregroundGravity="center"
-                android:padding="7dp"
+                android:padding="5dp"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
+                app:tint="@color/black"
                 android:src="@drawable/icons8_message_50__2_" />
 
             <ImageButton
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="0dp"
+                android:layout_marginStart="1dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
-                android:padding="10dp"
+                android:background="#DFD0D0"
+                android:padding="5dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/icons8_notification_bell_50__1_"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
 
@@ -75,7 +69,7 @@
                 android:id="@+id/topScrollRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal" />
         </LinearLayout>
 
@@ -83,17 +77,18 @@
     <FrameLayout
         android:id="@+id/frameCard"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frameLayout"
-        android:background="@color/black"
+        android:background="@drawable/top_frame_background"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@color/white"
             android:scaleType="centerInside"
             android:layout_margin="5dp"
             android:padding="5dp">
@@ -102,29 +97,30 @@
                 android:layout_height="45dp"
                 android:src="@drawable/icons8_currency_exchange_50"
                 android:scaleType="centerInside"
-                android:background="#6D969C"
+                android:background="@color/white"
                 android:padding="5dp"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
 
             <EditText
                 android:id="@+id/etFromCurrency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/roboto_medium"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:hint="From Currency"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/black"
                 />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@color/white"
             android:scaleType="centerInside"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="75dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:padding="5dp">
@@ -134,8 +130,8 @@
                 android:src="@drawable/icons8_currency_exchange_30"
                 android:scaleType="centerInside"
                 android:padding="5dp"
-                android:background="#6D969C"
-                app:tint="@color/white" />
+                android:background="@color/white"
+                app:tint="@color/black" />
 
             <EditText
                 android:id="@+id/etToCurrency"
@@ -144,9 +140,10 @@
                 android:hint="To Currency"
                 android:layout_marginStart="50dp"
                 android:layout_weight="1"
-                android:textColorHint="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="@color/black"
                 android:textSize="16sp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 />
 
         </LinearLayout>
@@ -154,10 +151,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@drawable/landing_background"
             android:scaleType="centerInside"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="160dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:padding="5dp">
@@ -166,8 +163,9 @@
                 android:id="@+id/etAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:hint="Enter Amount"
                 android:textSize="16sp"
                 android:gravity="center"
@@ -179,9 +177,10 @@
                 android:id="@+id/etTotals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/black"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
                 android:hint="Totals"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -192,7 +191,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="245dp"
             android:textFontWeight="1"
             android:textColor="@color/black"
             android:layout_marginStart="135dp"

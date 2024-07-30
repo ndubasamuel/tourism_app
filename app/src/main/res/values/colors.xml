@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tkws_blue">#164C5C</color>
 
     <color name="divider_color">#1FFFFFFF</color>
     <color name="active_icon_color">@android:color/white</color>

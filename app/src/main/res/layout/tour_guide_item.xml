@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+    <ImageView
+        android:id="@+id/tourGuidePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+    <TextView
+        android:id="@+id/tourGuideName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Muriithi"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tourGuidePicture"
+        />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tourGuideAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        />
+    <TextView
+        android:id="@+id/tourGuideid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Here"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tourGuideAbout"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

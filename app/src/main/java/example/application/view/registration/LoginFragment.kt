@@ -60,7 +60,7 @@ class LoginFragment : Fragment() {
 
                         if (loginResponse.value.status == 200){
                             hideProgressBar()
-                            findNavController().navigate(R.id.action_loginFragment_to_landingFragment2)
+                            findNavController().navigate(R.id.action_loginFragment_to_profileFragment)
                         }
 
                         Toast.makeText(requireContext(), "${loginResponse.value.Message} ):", Toast.LENGTH_SHORT).show()

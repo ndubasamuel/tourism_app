@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_anchorGravity="bottom"
+    android:layout_gravity="bottom"
+    app:layout_behavior="com.google.android.material.bottomappbar.BottomAppBar$Behavior"
+    android:background="@drawable/booking_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/booking_background"
+
+        >
+        <ImageView
+            android:id="@+id/hideSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/remove_24px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="50dp"/>
+            <TextView
+                android:id="@+id/servicePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:layout_marginStart="150dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOOKING FOR:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/roboto_medium"/>
+
+
+        <Spinner
+            android:id="@+id/adultSpinnerBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textAlignment="center"
+            android:backgroundTint="#DFD8D7"
+            android:layout_marginStart="250dp"/>
+
+        <Spinner
+            android:id="@+id/childrenSpinnerBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:textAlignment="center"
+            android:backgroundTint="#DFD8D7"
+            android:contextClickable="true"
+            android:layout_marginStart="240dp"/>
+
+        <EditText
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL AMOUNT"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:hint="AMOUNT:"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="250dp"
+            android:layout_marginStart="20dp"
+            />
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAY"
+            android:layout_gravity="end"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/search_button_background"/>
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

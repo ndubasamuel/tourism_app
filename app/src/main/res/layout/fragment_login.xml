@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D969C"
+    android:background="@drawable/landing_background"
     tools:context=".view.registration.LoginFragment"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,6 +52,7 @@
             android:textColor="@color/black"
             android:hint="Registered Email"
             android:paddingStart="10dp"
+            android:textSize="16sp"
             android:layout_marginTop="100dp"
             android:textColorHint="@color/black"
             android:layout_marginStart="10dp"
@@ -70,6 +71,7 @@
             android:textColor="@color/black"
             android:hint="Password"
             android:paddingStart="10dp"
+            android:textSize="16sp"
             android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
@@ -102,6 +104,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="20dp"
+            android:visibility="invisible"
+            tools:visibility ="visible"
             app:layout_constraintBottom_toTopOf="@id/buttonLogin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

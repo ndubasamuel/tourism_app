@@ -33,7 +33,7 @@ import example.application.view.adapters.TopScrollAdapter
 import java.io.IOException
 
 
-class LandingFragment : Fragment(), TopScrollAdapter.OnItemClickListener, OnMapReadyCallback {
+class LandingFragment : Fragment(), OnMapReadyCallback, TopScrollAdapter.OnItemClickListener {
 
     private lateinit var binding: FragmentLandingBinding
     private lateinit var googleMap: GoogleMap

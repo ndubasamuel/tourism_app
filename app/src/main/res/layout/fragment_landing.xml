@@ -11,44 +11,36 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#164C5C"
+        android:background="#DFD0D0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="#164C5C"
             >
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="70dp"
-                android:src="@drawable/icons8_wave_25"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="70dp"
-                app:tint="#44FAFA" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="25dp"
                 android:text="EclecStay"
                 android:textStyle="bold"
                 android:textSize="38sp"
-                android:textColor="#2AF6F6" />
+                android:textColor="#2A86F6" />
 
             <ImageButton
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
+                android:background="#DFD0D0"
                 android:foregroundGravity="center"
-                android:padding="7dp"
+                android:padding="5dp"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
+                app:tint="@color/black"
                 android:src="@drawable/icons8_message_50__2_" />
 
             <ImageButton
@@ -56,18 +48,20 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
-                android:padding="8dp"
+                android:background="#DFD0D0"
+                android:padding="5dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/icons8_notification_bell_50__1_"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
 
@@ -75,7 +69,7 @@
                 android:id="@+id/topScrollRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal" />
         </LinearLayout>
 
@@ -84,7 +78,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#6D969C"
+        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/frameLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         >
@@ -99,14 +93,15 @@
                 android:layout_height="220dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/black"
+                android:background="@drawable/top_frame_background"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:background="#6D969C"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
                     android:scaleType="centerInside"
                     android:layout_margin="5dp"
                     android:padding="5dp">
@@ -115,17 +110,18 @@
                         android:layout_height="45dp"
                         android:src="@drawable/icons8_location_50"
                         android:scaleType="centerInside"
-                        android:background="#6D969C"
+                        android:background="@color/white"
                         android:padding="10dp"
-                        app:tint="@color/white" />
+                        app:tint="@color/black" />
 
                     <EditText
                         android:id="@+id/startDestination"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_medium"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/white"
+                        android:textColorHint="@color/black"
                         android:hint="Start destination"
                         android:textSize="16dp"
                         android:layout_weight="1"/>
@@ -133,8 +129,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:background="#6D969C"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
                     android:scaleType="centerInside"
                     android:layout_marginTop="60dp"
                     android:layout_marginStart="5dp"
@@ -146,16 +142,17 @@
                         android:src="@drawable/icons8_location_50"
                         android:scaleType="centerInside"
                         android:padding="10dp"
-                        android:background="#6D969C"
-                        app:tint="@color/white" />
+                        android:background="@color/white"
+                        app:tint="@color/black" />
 
                     <EditText
                         android:id="@+id/dropOff"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:layout_marginTop="10dp"
-                        android:textColorHint="@color/white"
+                        android:textColorHint="@color/black"
+                        android:fontFamily="@font/roboto_medium"
                         android:hint="Drop Off"
                         android:textSize="16sp"
                         android:layout_weight="1"/>
@@ -205,13 +202,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="10dp"
-                    android:background="#6D969C"
+                    android:background="@color/white"
                     android:layout_marginEnd="10dp">
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/cabRecyclerView"
                         android:layout_width="wrap_content"
-                        android:background="#3C6267"
-                        android:backgroundTint="#3C6267"
+                        android:background="@color/white"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
             </FrameLayout>

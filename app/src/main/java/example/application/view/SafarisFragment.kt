@@ -10,17 +10,31 @@ import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Spinner
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import example.application.model.UseData
 import example.application.R
 import example.application.databinding.FragmentSafarisBinding
+import example.application.model.network.api.RetrofitInstance
+import example.application.model.repository.Repository
 import example.application.model.source.Data
 import example.application.view.adapters.TopScrollAdapter
+import example.application.view.adapters.TourGuideAdapter
+import example.application.viewModel.ViewModelClass
+import example.application.viewModel.ViewModelFactory
 import java.util.Calendar
 
 
 class SafarisFragment : Fragment(), TopScrollAdapter.OnItemClickListener {
+
+
+    private val repository: Repository by lazy {
+        Repository.getInstance(RetrofitInstance.api)
+    }
+    private val viewModel: ViewModelClass by viewModels {
+        ViewModelFactory(repository)
+    }
 
     private lateinit var safarisBinding: FragmentSafarisBinding
     private lateinit var datePicker: ImageButton
@@ -28,6 +42,8 @@ class SafarisFragment : Fragment(), TopScrollAdapter.OnItemClickListener {
 
     private lateinit var adultsSpinner: Spinner
     private lateinit var childrenSpinner: Spinner
+
+    private lateinit var tourGuideAdapter: TourGuideAdapter
 
     private lateinit var topScrollAdapter: TopScrollAdapter
     private var topScrollItems: ArrayList<UseData.TopScroll> = ArrayList()
@@ -55,6 +71,8 @@ class SafarisFragment : Fragment(), TopScrollAdapter.OnItemClickListener {
 
             }
         }
+
+//        viewModel.tourGuides.observe(viewLifecycleOwner)
 
         val useData = Data()
         topScrollItems = useData.strings()
@@ -94,6 +112,13 @@ class SafarisFragment : Fragment(), TopScrollAdapter.OnItemClickListener {
         val topScrollRecyclerView = safarisBinding.topScrollRecycler
         topScrollRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         topScrollRecyclerView.adapter = topScrollAdapter
+
+
+        tourGuideAdapter = TourGuideAdapter()
+
+        val tourRecyclerView = safarisBinding.guideRecycler
+        tourRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        tourRecyclerView.adapter = tourGuideAdapter
     }
 
     override fun onItemClick(position: Int) {

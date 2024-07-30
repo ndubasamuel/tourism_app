@@ -27,6 +27,17 @@ class Repository(private val api: ServicesApi): BaseRepository()  {
         api.signUp(firstName, secondName, email, phone, password)
     }
 
+
+    suspend fun makePayments() = safeApiCall{
+        api.makePayments("")
+    }
+
+    suspend fun getTourGuides() = safeApiCall {
+        api.getGuides("")
+    }
+
+
+
     companion object {
         @Volatile
         private var INSTANCE: Repository? = null

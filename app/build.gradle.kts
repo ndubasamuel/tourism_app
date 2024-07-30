@@ -1,3 +1,5 @@
+import android.annotation.SuppressLint
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -41,8 +43,7 @@ android {
         dataBinding = true
     }
 }
-
-dependencies {
+ dependencies {
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("com.google.android.material:material:1.9.0")
@@ -62,9 +63,9 @@ dependencies {
     implementation ("com.google.android.gms:play-services-maps:18.0.2")
     implementation ("com.google.android.gms:play-services-location:21.0.1")
 
-    implementation ("com.android.support:appcompat-v7:25.1.0")
-    implementation ("com.android.support:design:25.1.0")
-    implementation ("com.android.support:support-v4:25.1.0")
+//    implementation ("androidx.android.support:appcompat-v7:25.1.0")
+//    implementation ("androidx.android.support:design:25.1.0")
+//    implementation ("androidx.android.support:support-v4:25.1.0")
 
     implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")
@@ -84,4 +85,13 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
 
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21")
+    kapt ("com.google.dagger:hilt-android-compiler:2.38.1")
+
+}
+
+kapt {
+    correctErrorTypes = true
 }

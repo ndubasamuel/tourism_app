@@ -4,51 +4,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6D969C"
+    android:background="@drawable/landing_background"
     tools:context=".view.SafarisFragment">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#164C5C"
+        android:background="#DFD0D0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="#164C5C"
             >
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="70dp"
-                android:src="@drawable/icons8_wave_25"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="70dp"
-                app:tint="#44FAFA" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="25dp"
                 android:text="EclecStay"
                 android:textStyle="bold"
                 android:textSize="38sp"
-                android:textColor="#2AF6F6" />
+                android:textColor="#2A86F6" />
 
             <ImageButton
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
+                android:background="#DFD0D0"
                 android:foregroundGravity="center"
-                android:padding="7dp"
+                android:padding="5dp"
                 android:scaleType="centerInside"
-                app:tint="@color/white"
+                app:tint="@color/black"
                 android:src="@drawable/icons8_message_50__2_" />
 
             <ImageButton
@@ -56,18 +48,20 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="5dp"
-                android:background="#164C5C"
-                android:padding="8dp"
+                android:background="#DFD0D0"
+                android:padding="5dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/icons8_notification_bell_50__1_"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
 
@@ -75,7 +69,7 @@
                 android:id="@+id/topScrollRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal" />
         </LinearLayout>
 
@@ -86,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@id/frameLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#6D969C"
+        android:background="@drawable/landing_background"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -95,17 +89,18 @@
     <FrameLayout
         android:id="@+id/frameCard"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="280dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/black"
+        android:background="@drawable/top_frame_background"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@drawable/landing_background"
             android:scaleType="centerInside"
             android:layout_margin="5dp"
             android:padding="5dp">
@@ -114,9 +109,9 @@
                 android:layout_height="45dp"
                 android:src="@drawable/icons8_safari_96"
                 android:scaleType="centerInside"
-                android:background="#6D969C"
+                android:background="@color/white"
                 android:padding="2dp"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
 
             <EditText
                 android:layout_width="0dp"
@@ -125,17 +120,18 @@
                 android:textStyle="bold"
                 android:layout_marginStart="20dp"
                 android:hint="Where Would You Like To Go"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="16sp"
                 />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@drawable/landing_background"
             android:scaleType="centerInside"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="70dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:padding="5dp">
@@ -145,8 +141,8 @@
                 android:src="@drawable/icons8_safari_64"
                 android:scaleType="centerInside"
                 android:padding="3dp"
-                android:background="#6D969C"
-                app:tint="@color/white" />
+                android:background="@color/white"
+                app:tint="@color/black" />
 
             <Spinner
                 android:id="@+id/adultSpinner"
@@ -170,8 +166,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#6D969C"
+            android:layout_height="70dp"
+            android:background="@drawable/landing_background"
             android:scaleType="centerInside"
             android:layout_marginTop="130dp"
             android:layout_marginStart="5dp"
@@ -184,19 +180,22 @@
                 android:src="@drawable/icons8_calender_64"
                 android:scaleType="centerInside"
                 android:padding="5dp"
-                android:background="#6D969C"
-                app:tint="@color/white" />
+                android:background="@drawable/landing_background"
+                app:tint="@color/black" />
 
             <EditText
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:hint="Specific Dates"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_weight="1"
                 android:layout_marginStart="50dp"
-                android:text="Specific Dates"/>
+                />
 
         </LinearLayout>
 
@@ -205,7 +204,7 @@
             android:layout_height="40dp"
             android:background="@drawable/search_button_background"
             android:scaleType="centerInside"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="220dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:padding="5dp">
@@ -240,10 +239,11 @@
             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="140dp"
             android:layout_marginTop="20dp"
             >
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guideRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -254,16 +254,18 @@
             android:layout_height="wrap_content"
             android:text="Water Safaris"
             android:textColor="@color/black"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="170dp"
             />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="160dp"
                 >
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    />
         </LinearLayout>
 
         <TextView
@@ -271,12 +273,12 @@
             android:layout_height="wrap_content"
             android:text="Mountain Hikes"
             android:textColor="@color/black"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="240dp"
             />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="260dp"
             >
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

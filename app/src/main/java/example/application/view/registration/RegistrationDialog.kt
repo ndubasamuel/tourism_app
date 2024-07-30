@@ -21,11 +21,9 @@ class RegistrationDialog(): DialogFragment() {
                 }
                 .setNegativeButton("CREATE ACCOUNT") { Dialog, which ->
 
-
+                    Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(R.id.registrationFragment)
                     dismiss()
-
                 }
-
             builder.create()
 
         }?: throw java.lang.IllegalStateException("Activity Cannot be Null")
